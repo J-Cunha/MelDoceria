@@ -1,0 +1,61 @@
+<%= simple_form_for(@product) do |f| %>
+    <%= f.error_notification %>
+
+    <div class="form-inputs">
+      <div class="container-fluid">
+        <div class="row">
+          <div class="col-xs-7 col-lg-9">
+            <%= f.association :category %>
+          </div>
+          <div class="col-xs-5 col-lg-3">
+            <%= f.association :flavors %>
+          </div>
+
+          <div class="col-xs-8 col-lg-10">
+            <%= f.input :name %>
+          </div>
+          <div class="col-xs-4 col-lg-2">
+            <%= f.input :value %>
+
+          </div>
+
+        </div>
+        <div class="row">
+          <div class="col-sm-6 col-md-6 col-lg-6">
+            <div class="row">
+              <div class="col-xs-6 col-sm-6 col-md-6 col-lg-6">
+                <%= f.input :p_size %>
+              </div>
+              <div class="col-xs-6 col-sm-6 col-md-6 col-lg-6">
+                <%= f.input :weight %>
+              </div>
+            </div>
+          </div>
+          <div class="col-sm-6 col-md-6 col-lg-6">
+            <div class="row">
+              <div class="col-xs-4 col-sm-4 col-md-4 col-lg-4">
+                <%= f.input :height %>
+              </div>
+              <div class="col-xs-4 col-sm-4 col-md-4 col-lg-4">
+                <%= f.input :width %>
+              </div>
+              <div class="col-xs-4 col-sm-4 col-md-4 col-lg-4">
+                <%= f.input :depth %>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-sm-12">
+            <div class="form-actions">
+              <%= f.button :submit %>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+    <%# f.association :sizes %>
+
+
+<% end %>

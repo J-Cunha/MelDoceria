@@ -1,0 +1,43 @@
+--products menu--------------------------------------------------------------------------------
+<div class="panel panel-default dashboard-menu-panel ">
+          <div class="panel-heading dashboard-menu-head">
+            <h4 class="panel-title dashboard-menu-title ">
+              <a data-toggle="collapse" data-parent="#accordion" href="#collapseTwo">Sabores</a>
+            </h4>
+          </div>
+          <div id="collapseTwo" class="panel-collapse collapse">
+            <div class="panel-body">
+              <table class="table">
+                <% @flavors.each do |flavor| %>
+                    <tr>
+                  <td>
+                    <%= link_to "#{flavor.name}", products_path %>
+                  </td>
+                </tr>
+                <% end %>
+              </table>
+            </div>
+          </div>
+        </div>
+        <div class="panel panel-default dashboard-menu-panel ">
+          <div class="panel-heading dashboard-menu-head">
+            <h4 class="panel-title dashboard-menu-title ">
+              <a data-toggle="collapse" data-parent="#accordion" href="#collapseThree">Tamanhos</a>
+            </h4>
+          </div>
+          <div id="collapseThree" class="panel-collapse collapse">
+            <div class="panel-body">
+              <table class="table">
+                <% @sizes.each do |size| %>
+                    <tr>
+                  <td>
+                    <%= link_to "#{size}", products_path, class: "mel-dark" %>
+                  </td>
+                </tr>
+                <% end %>
+              </table>
+            </div>
+          </div>
+        </div>
+
+-------------------------------------------------------
