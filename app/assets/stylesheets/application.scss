@@ -15,50 +15,23 @@
 //@import "pages/index";
 
 @import "index";
+@import "products";
 
-
+.value-green{
+  color: $value_color;
+}
 .mel-dark{
   color: $mel_dark;
 }
 .mel-light{
   color: $mel_light;
 }
-.menu-link:hover{
-  color: $mel_dark;
-}
-.product-container{
-  border-color: $mel_dark;
-  background-color: transparent;
-  border-radius: 10px;
-}
-  .dashboard-container{
-    margin-top: 70px ;
-    background: transparent !important;
-  }
-  .dashboard-menu-panel {
-    //background: transparent !important;
-    border-color: $mel_dark;
-  }
-  .dashboard-menu-head{
-    background-color: transparent !important;
-    color: $mel_dark !important;
-  }
-  .dashboard-menu-title{
-  }
-  .dashboard-menu-content-container{
-    border-color: $mel_dark !important;
-    //padding-left: 25px;
-  }
-  .dashboard-addresses-tbody td{
 
-    border: none !important;
-    //border-color: $water_light_60 !important;
 
-  }
-  .table-command-button{
-    margin: 0 5px 0 5px;
-  }
-  .dashboard-menu-container {
-    margin-top: 20px;
 
-  }
+
+
+
+
+
+

@@ -1,6 +1,6 @@
 <div class="container-fluidr" style="margin: 180px 50px 0 50px; ">
   <p id="notice"><%= notice %></p>
-  <div class="row" >
+  <div class="row">
     <div class="col-lg-2 col-md-3 col-sm-4  ">
 
       <div class="panel-group dashboard-menu" id="accordion">
@@ -15,16 +15,16 @@
             <div class="panel-body">
               <table class="table">
                 <% @categories.each do |category| %>
-                  <tr>
-                   <td>
-                    <%= image_tag 'cakes.png' if category.name == "Bolos"%>
-                    <%= image_tag 'brownies.png' if category.name == "Brownies"%>
-                    <%= image_tag 'brownie_jar.png' if category.name == "Brownies no pote"%>
-                    <%= image_tag 'brigadeiros.png' if category.name == "Brigadeiros"%>
-                    <%= link_to "#{category.name}", products_path, class: 'mel-dark menu-link' %>
-                    <!--<span class="glyphicon glyphicon-pencil text-primary"></span><a href="http://www.jquery2dotnet.com">Articles</a>-->
-                    </td>
-                  </tr>
+                    <tr>
+                      <td>
+                        <%= image_tag 'cakes.png' if category.name == "Bolos" %>
+                        <%= image_tag 'brownies.png' if category.name == "Brownies" %>
+                        <%= image_tag 'brownie_jar.png' if category.name == "Brownies no pote" %>
+                        <%= image_tag 'brigadeiros.png' if category.name == "Brigadeiros" %>
+                        <%= link_to "#{category.name}", products_path, class: 'mel-dark menu-link' %>
+                        <!--<span class="glyphicon glyphicon-pencil text-primary"></span><a href="http://www.jquery2dotnet.com">Articles</a>-->
+                      </td>
+                    </tr>
                 <% end %>
               </table>
             </div>
@@ -38,20 +38,28 @@
       <% i = 0 %>
 
       <% @products.each do |product| %>
-            <% if i%3==0 && i != 0 %>
-                </div>
-            <% end %>
-            <% if i == 0 || i%3==0 %>
+          <% if i%3==0 && i != 0 %>
+              </div>
+          <% end %>
+          <% if i == 0 || i%3==0 %>
               <div class="row">
           <% end %>
           <div class="col-lg-4 col-md-4 col-xs-12 ">
             <div class="thumbnail product-container" style="">
-              <img src="" alt="...">
+              <div class="product-image-container item">
+                <%= link_to (image_tag product.product_image, class: 'product-image img-responsive'), product  %>
+              <div class="middle">
+                <div class="text"><%= link_to "Deleicioso gostoso maravilhoso bolo divino das alturas onde o grande bahomet reside product.description", product, class: 'product-description-link' %></div>
+              </div>
+              </div>
               <div class="caption ">
-                <h3 class="center"><%= link_to "#{product.name}", product, class: 'mel-dark menu-link' %></h3>
-                <p><%= product.description %></p>
-                <p><a href="#" class="btn btn-primary" role="button">Button</a>
-                  <a href="#" class="btn btn-default" role="button">Button</a></p>
+                <div class="container-fluid">
+                  <h3 class="center"><%= link_to "#{product.name}", product, class: 'mel-dark menu-link' %></h3>
+                  <h4 class="value-green "><%= "R$#{product.value}" %></h4>
+                  <p></p>
+                  <p><a href="#" class="btn btn-primary" role="button">Button</a>
+                    <a href="#" class="btn btn-default" role="button">Button</a></p>
+                </div>
               </div>
             </div>
           </div>

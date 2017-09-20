@@ -5,4 +5,5 @@ class Product < ApplicationRecord
   has_many :product_sizes, dependent: :destroy
   has_many :sizes, dependent: :destroy, through: :product_flavors
   validates_uniqueness_of :name
+  mount_uploader :product_image, ProductImageUploader
 end
