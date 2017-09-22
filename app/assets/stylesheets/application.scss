@@ -28,10 +28,89 @@
 }
 
 
+.about-page-titles{
+  color: white;
+  background-color: $purple;
+  padding: 15px;
+  border-radius: 10px;
+  font-weight: bold;
+}
+.midia-video-container{
+  margin-top: 20px;
+}
+.about_us-title{
 
+}
+.about_us-text {
+  color:white;
+  background-color: $purple;
+  padding: 15px;
+  border-radius: 10px;
+  font-size: 130%;
 
+}
 
-
-
+.clients-container {
+  margin: 0;
+  min-height: 600px;
+  background: url("clients_background.jpg") center;
+  background-size: cover;
+}
+.about-container{
+  margin: 0;
+  min-height: 600px;
+  background: url("about_page.png");
+  background-size: cover;
+  background-position: center;
+}
+#about-bottom-gradient {
+  $brown: #7a5a45;
+  min-height: 10px;
+  background: $brown; /* For browsers that do not support gradients */
+  background: -webkit-linear-gradient($brown, white); /* For Safari 5.1 to 6.0 */
+  background: -o-linear-gradient($brown, white); /* For Opera 11.1 to 12.0 */
+  background: -moz-linear-gradient($brown, white); /* For Firefox 3.6 to 15 */
+  background: linear-gradient($brown, white); /* Standard syntax */
+}
+#about-top-gradient {
+  $brown: #b48a71;
+  min-height: 6px;
+  background: white; /* For browsers that do not support gradients */
+  background: -webkit-linear-gradient(white, $brown); /* For Safari 5.1 to 6.0 */
+  background: -o-linear-gradient(white, $brown); /* For Opera 11.1 to 12.0 */
+  background: -moz-linear-gradient(white, $brown); /* For Firefox 3.6 to 15 */
+  background: linear-gradient(white, $brown); /* Standard syntax */
+}
+#clients-top-gradient {
+  $brown: #000000;
+  min-height: 10px;
+  background: white; /* For browsers that do not support gradients */
+  background: -webkit-linear-gradient(white, $brown); /* For Safari 5.1 to 6.0 */
+  background: -o-linear-gradient(white, $brown); /* For Opera 11.1 to 12.0 */
+  background: -moz-linear-gradient(white, $brown); /* For Firefox 3.6 to 15 */
+  background: linear-gradient(white, $brown); /* Standard syntax */
+}
+#clients-bottom-gradient {
+  $brown: #000000;
+  min-height: 10px;
+  background: $brown; /* For browsers that do not support gradients */
+  background: -webkit-linear-gradient($brown, white); /* For Safari 5.1 to 6.0 */
+  background: -o-linear-gradient($brown, white); /* For Opera 11.1 to 12.0 */
+  background: -moz-linear-gradient($brown, white); /* For Firefox 3.6 to 15 */
+  background: linear-gradient($brown, white); /* Standard syntax */
+}
+.client-img-container-romanelli{
+  background-color: #292f45 !important;
+  margin-top: 10px;
+}
+.client-img-container-tipicamente{
+  background-color: #f38634 !important;
+  margin-top: 10px;
+}
+.client-img-container{
+  padding: 10px 10px 10px 10px;
+  background-color: white;
+  border-radius: 10px;
+}
 
 

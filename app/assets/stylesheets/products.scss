@@ -6,7 +6,12 @@
 // You can use Sass (SCSS) here: http://sass-lang.com/
 .product-image-container{
   padding: 10px;
-
+  position: relative;
+  margin: 2%;
+  overflow: hidden;
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
 }
 .product-image{
   border-radius: 10px;
@@ -17,6 +22,14 @@
   transition: .5s ease;
   backface-visibility: hidden;
 }
+.product-image-container img {
+  max-width: 100%;
+
+  -moz-transition: all 0.3s;
+  -webkit-transition: all 0.3s;
+  transition: all 0.3s;
+}
+
 .menu-link:hover{
   color: $mel_dark;
 }
@@ -56,33 +69,15 @@
   margin-top: 20px;
 
 }
-.item {
-  -moz-box-sizing: border-box;
-  -webkit-box-sizing: border-box;
-  box-sizing: border-box;
-  margin: 0;
-  padding: 0;
-}
 
-.item {
-  position: relative;
-  margin: 2%;
-  overflow: hidden;
-}
-.item img {
-  max-width: 100%;
 
-  -moz-transition: all 0.3s;
-  -webkit-transition: all 0.3s;
-  transition: all 0.3s;
-}
-.item:hover img {
+.product-image-container:hover img {
   -moz-transform: scale(1.1);
   -webkit-transform: scale(1.1);
   transform: scale(1.1);
   opacity: 0.3;
 }
-.item:hover .middle {
+.product-image-container:hover .middle {
   opacity: 1;
 }
 .middle {
@@ -107,6 +102,7 @@
 }
 .product-description-link:hover{
   color: white;
+  text-decoration: none;
 
 }
 

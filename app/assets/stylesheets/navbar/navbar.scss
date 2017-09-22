@@ -11,15 +11,16 @@ $nav_li_hover_font_size: 160%;
 $navbar_height: 150px;
 
 .brand-img-container{
-  margin-top: -40px;
+  margin-top: -55px;
   max-height: 150px;
   max-width: 180px;
   //padding-left: 10px;
 }
 .nav-items-container{
-  background-color: $mel_light;
+  background-color: $mel_dark;
   padding: 0px 5px 10px 5px;
   border-radius: 15px;
+  margin-right: 30px;
 }
 
 //navbar general properties
@@ -27,7 +28,7 @@ $navbar_height: 150px;
 .navbar {
   min-height: $navbar_height;
   max-height: $navbar_height;
-  padding: 35px 0px 0px 0;
+  padding: 50px 0px 0px 0;
 
 }
 .navbar-default {
@@ -41,9 +42,9 @@ $navbar_height: 150px;
 
 .navbar-default .navbar-nav > .active > a, .navbar-default .navbar-nav > .active >
 a:hover, .navbar-default .navbar-nav > .active > a:focus {
-  background-color: $mel_dark; /*BACKGROUND color for active*/
+  background-color: $mel_light; /*BACKGROUND color for active*/
   //color: #515151; /*BACKGROUND color for active*/
-  color: $mel_light; /*BACKGROUND color for active*/
+  color: $mel_dark; /*BACKGROUND color for active*/
   font-size: $nav_li_hover_font_size;
   //background: white;
   font-weight: bold ;
@@ -54,11 +55,11 @@ a:hover, .navbar-default .navbar-nav > .active > a:focus {
 //NAV BAR DEFAULT NAV ITEM:HOVER
 .navbar-default .navbar-nav > li > a:hover {
   //color: #515151;  //Sets the text hover color on navbar
-  color: $mel_light;  //Sets the text hover color on navbar
+  color: $mel_dark;  //Sets the text hover color on navbar
   //font-weight: bold ;
   //font-size: 10%;
   //font-size: 10%;
-  background-color: $mel_dark;
+  background-color: $mel_light;
   border-radius: 10px;
   //text-decoration: underline;
 }
@@ -66,7 +67,7 @@ a:hover, .navbar-default .navbar-nav > .active > a:focus {
 //general items properties
 .navbar-default .navbar-nav > li > a {
   //color: #515151; /*Change active text color here*/
-  color: $mel_dark; /*Change active text color here*/
+  color: $mel_light; /*Change active text color here*/
   font-size: $nav_li_common_font_size;
   //font-family: Aadhunik;
   font-family:  Helvetica, sans-serif;
@@ -99,23 +100,4 @@ a:hover, .navbar-default .navbar-nav > .active > a:focus {
   position: relative;
   overflow: hidden;
 }
-.hvr-underline-from-center:before {
-  content: "";
-  position: absolute;
-  z-index: -1;
-  left: 50%;
-  right: 50%;
-  bottom: 0;
-  background: $water_light_70;
-  height: 4px;
-  -webkit-transition-property: left, right;
-  transition-property: left, right;
-  -webkit-transition-duration: 0.3s;
-  transition-duration: 0.3s;
-  -webkit-transition-timing-function: ease-out;
-  transition-timing-function: ease-out;
-}
-.hvr-underline-from-center:hover:before, .hvr-underline-from-center:focus:before, .hvr-underline-from-center:active:before {
-  left: 0;
-  right: 0;
-}
+
