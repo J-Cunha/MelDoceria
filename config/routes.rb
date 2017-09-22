@@ -1,4 +1,6 @@
 Rails.application.routes.draw do
+  resources :product_sizes
+  resources :product_size_categories
   resources :flavors
   resources :categories
   resources :products

@@ -8,9 +8,6 @@ class ProductsController < ApplicationController
     @categories = Category.all
     @flavors = Flavor.all
     @sizes = []
-    Product.all.each do |p|
-      @sizes.push(p.p_size) unless p.p_size.nil? || p.p_size.empty? ||  @sizes.include?(p.p_size)
-    end
 
   end
 

@@ -26,19 +26,29 @@ nutella  = Flavor.create(name: "Doce de Leite")
 beijinho_coco = Flavor.create(name: "Beijinho de coco")
 integral = Flavor.create(name: "Integral")
 palha_italiana = Flavor.create(name: "Palha italiana")
-palha_italiana_galak = Flavor.create(name: "Galak")
+galak = Flavor.create(name: "Galak")
 tradicional = Flavor.create(name: "Tradicional")
 casquinha_de_browine = Flavor.create(name:"Casquinha de Brownie")
-casquinha_de_browine_doce_leite = Flavor.create(name:"Doce de leite e casquinha de brownie ")
-casquinha_de_browine_beijinho = Flavor.create(name:"Beijinho de coco e casquinha de brownie ")
 
 ################################################################################################
 #Flavors
 
+#ProductSizes
+################################################################################################
+p = ProductSizeCategory.create(name: 'P')
+m = ProductSizeCategory.create(name: 'M')
+g = ProductSizeCategory.create(name: 'G')
+
+ProductSize.create(product_size_category: p, name: 'Bolo Pequeno', weight:'1 Kg', width: '', height: '', depth: '')
+ProductSize.create(product_size_category: m, name: 'Bolo Medio', weight:'2 Kg', width: '', height: '', depth: '')
+ProductSize.create(product_size_category: g, name: 'Bolo Grande', weight:'3 Kg', width: '', height: '', depth: '')
+
+################################################################################################
+#ProductSizes
 #Products
 ################################################################################################
 #bolos
-bolo_kit_kat = Product.create(name: "Kit Kat", category: bolos_cat)
+bolo_kit_kat = Product.create(name: "Bolo de Kitkat com morango", category: bolos_cat)
 bolo_kit_kat.flavors=morango, mms, brigadeiro_leite_ninho, brigadeiro_leite_ninho_nutella
 
 bolo_brownie = Product.create(name: "Brownie", category: bolos_cat)
@@ -47,11 +57,11 @@ bolo_brownie.flavors = [brownie_fla]
 
 #brownies
 brownies_brownie = Product.create(name: "Brownie", category: brownies_cat)
-brownies_brownie.flavors = tradicional, doce_de_leite, nutella, beijinho_coco, integral, palha_italiana, palha_italiana_galak
+brownies_brownie.flavors = tradicional, doce_de_leite, nutella, beijinho_coco, integral, palha_italiana, galak
 
 #browines_pote
 brownies_pote_brownie = Product.create(name: "Brownie no pote", category: brownies_pote_cat)
-brownies_pote_brownie.flavors=casquinha_de_browine, casquinha_de_browine_beijinho, casquinha_de_browine_doce_leite
+brownies_pote_brownie.flavors=casquinha_de_browine, tradicional
 
 
 #brigadeiros
