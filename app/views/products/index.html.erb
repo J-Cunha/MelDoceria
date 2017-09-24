@@ -1,4 +1,5 @@
 <div class="container-fluidr" style="margin: 180px 50px 0 50px; ">
+  <br>
   <p id="notice"><%= notice %></p>
   <div class="row">
     <div class="col-lg-2 col-md-3 col-sm-4  ">
@@ -47,16 +48,15 @@
           <div class="col-lg-4 col-md-4 col-xs-12 ">
             <div class="thumbnail product-container" style="">
               <div class="product-image-container ">
-                <%= link_to (image_tag product.product_image, class: 'product-image img-responsive'), product  %>
-              <div class="middle">
-                <div class="product-description"><%= link_to "Deleicioso gostoso maravilhoso bolo divino das alturas onde o grande bahomet reside product.description", product, class: 'product-description-link' %></div>
-              </div>
+                <%= link_to (image_tag product.product_image, class: 'product-image img-responsive'), product %>
+                <div class="middle">
+                  <div class="product-description"><%= link_to "Deleicioso gostoso maravilhoso bolo divino das alturas onde o grande bahomet reside product.description", product, class: 'product-description-link' %></div>
+                </div>
               </div>
               <div class="caption ">
                 <div class="container-fluid">
                   <h3 class="center"><%= link_to "#{product.name}", product, class: 'mel-dark menu-link' %></h3>
                   <h4 class="value-green "><%= "R$#{product.value}" %></h4>
-                  <p></p>
                   <!-- <p><a href="#" class="btn btn-primary" role="button">Button</a>
                     <a href="#" class="btn btn-default" role="button">Button</a></p>-->
                 </div>

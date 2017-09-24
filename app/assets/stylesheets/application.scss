@@ -8,6 +8,7 @@
 @import "config/colors";
 //@import "config/bootstrap_variables";
 @import "navbar/navbar";
+@import "footer";
 
 // Your CSS partials
 //@import "layouts/index";
@@ -49,7 +50,7 @@
 
 .form-input::-webkit-input-placeholder { /* WebKit, Blink, Edge */
   color:    $mel_dark;
-  font-weight: bol;
+  font-weight: bold;
 }
 .form-input:-moz-placeholder { /* Mozilla Firefox 4 to 18 */
   color:    $mel_dark;

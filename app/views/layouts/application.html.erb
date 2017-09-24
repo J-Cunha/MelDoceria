@@ -22,8 +22,12 @@
     <%= render 'layouts/navbar/navbar' %>
     <%= render 'layouts/shared/flashes' %>
     <%= yield %>
+
   </div>
+  <%= render 'layouts/footer' %>
+
   </body>
+
   <script type="application/javascript">
       setWorldBackgroundHeight();
       window.addEventListener('resize', setWorldBackgroundHeight);

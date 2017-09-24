@@ -14,7 +14,7 @@
   box-sizing: border-box;
 }
 .product-image{
-  border-radius: 10px;
+  border-radius: 0px;
   opacity: 1;
   display: block;
   width: 100%;
@@ -23,7 +23,6 @@
   backface-visibility: hidden;
 }
 .product-image-container img {
-  max-width: 100%;
 
   -moz-transition: all 0.3s;
   -webkit-transition: all 0.3s;
@@ -33,14 +32,15 @@
   color: $mel_dark;
 }
 .product-image-container{
-  height: 320px;
+  max-height: 250px;
 
 }
 .product-container{
   border-color: $mel_dark;
   background-color: transparent;
   border-radius: 10px;
-  height: 480px;
+  min-height: 320px;
+
 }
 .dashboard-container{
   margin-top: 70px ;
