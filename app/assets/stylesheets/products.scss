@@ -29,14 +29,18 @@
   -webkit-transition: all 0.3s;
   transition: all 0.3s;
 }
-
 .menu-link:hover{
   color: $mel_dark;
+}
+.product-image-container{
+  height: 320px;
+
 }
 .product-container{
   border-color: $mel_dark;
   background-color: transparent;
   border-radius: 10px;
+  height: 480px;
 }
 .dashboard-container{
   margin-top: 70px ;
@@ -57,7 +61,6 @@
   //padding-left: 25px;
 }
 .dashboard-addresses-tbody td{
-
   border: none !important;
   //border-color: $water_light_60 !important;
 
@@ -67,10 +70,7 @@
 }
 .dashboard-menu-container {
   margin-top: 20px;
-
 }
-
-
 .product-image-container:hover img {
   -moz-transform: scale(1.1);
   -webkit-transform: scale(1.1);
@@ -89,7 +89,7 @@
   transform: translate(-50%, -50%);
   -ms-transform: translate(-50%, -50%)
 }
-.text {
+.product-description {
   background-color: $purple;
   border-radius: 10px;
   color: white;

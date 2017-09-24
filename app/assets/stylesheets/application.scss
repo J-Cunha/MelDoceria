@@ -26,11 +26,52 @@
 .mel-light{
   color: $mel_light;
 }
+.transparent-background{
+ background: transparent;
+  border-color: $mel_dark;
+}
+.form-input:focus{
+  border-color: rgba(109, 49, 14, 0.8);
+  box-shadow: 0 1px 1px rgba(109, 49, 14, 0.075) inset, 0 0 8px rgba(109, 49, 14, 0.6);
+  outline: 0 none
 
+}
+.form-button{
+  background-color: $mel_dark;
+  color: $mel_light;
+  border-color: $mel_light;
+}
+.form-button:hover{
+  background-color: $mel_light;
+  color: $mel_dark;
+  border-color: $mel_dark;
+}
+
+.form-input::-webkit-input-placeholder { /* WebKit, Blink, Edge */
+  color:    $mel_dark;
+  font-weight: bol;
+}
+.form-input:-moz-placeholder { /* Mozilla Firefox 4 to 18 */
+  color:    $mel_dark;
+  opacity:  1;
+}
+.form-input::-moz-placeholder { /* Mozilla Firefox 19+ */
+  color:    $mel_dark;
+  opacity:  1;
+}
+.form-input:-ms-input-placeholder { /* Internet Explorer 10-11 */
+  color:    $mel_dark;
+}
+
+.about-page-titles-clients{
+  background-color: rgb(245,237,198) !important;
+
+}
 
 .about-page-titles{
-  color: white;
-  background-color: $purple;
+  color: $mel_dark;
+  background-color: rgba(245,237,198,0.7);
+
   padding: 15px;
   border-radius: 10px;
   font-weight: bold;
@@ -42,11 +83,13 @@
 
 }
 .about_us-text {
-  color:white;
-  background-color: $purple;
+  color: $mel_dark;
+  background-color: rgba(245,237,198,0.5);
+
   padding: 15px;
   border-radius: 10px;
   font-size: 130%;
+  font-weight: bold;
 
 }
 
@@ -108,6 +151,7 @@
   margin-top: 10px;
 }
 .client-img-container{
+  margin-top: 10px;
   padding: 10px 10px 10px 10px;
   background-color: white;
   border-radius: 10px;

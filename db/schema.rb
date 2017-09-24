@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20170922100121) do
+ActiveRecord::Schema.define(version: 20170922114328) do
 
   create_table "categories", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8" do |t|
     t.string "name"
@@ -31,6 +31,16 @@ ActiveRecord::Schema.define(version: 20170922100121) do
     t.datetime "updated_at", null: false
     t.index ["flavor_id"], name: "index_product_flavors_on_flavor_id"
     t.index ["product_id"], name: "index_product_flavors_on_product_id"
+  end
+
+  create_table "product_product_sizes", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8" do |t|
+    t.bigint "product_size_id"
+    t.bigint "product_id"
+    t.float "value", limit: 24
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["product_id"], name: "index_product_product_sizes_on_product_id"
+    t.index ["product_size_id"], name: "index_product_product_sizes_on_product_size_id"
   end
 
   create_table "product_size_categories", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8" do |t|
@@ -83,6 +93,8 @@ ActiveRecord::Schema.define(version: 20170922100121) do
 
   add_foreign_key "product_flavors", "flavors"
   add_foreign_key "product_flavors", "products"
+  add_foreign_key "product_product_sizes", "product_sizes"
+  add_foreign_key "product_product_sizes", "products"
   add_foreign_key "product_sizes", "product_size_categories"
   add_foreign_key "product_sizes", "products"
   add_foreign_key "products", "categories"
