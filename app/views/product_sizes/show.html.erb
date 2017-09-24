@@ -1,0 +1,34 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Product size category:</strong>
+  <%= @product_size.product_size_category %>
+</p>
+
+<p>
+  <strong>Name:</strong>
+  <%= @product_size.name %>
+</p>
+
+<p>
+  <strong>Weight:</strong>
+  <%= @product_size.weight %>
+</p>
+
+<p>
+  <strong>Width:</strong>
+  <%= @product_size.width %>
+</p>
+
+<p>
+  <strong>Height:</strong>
+  <%= @product_size.height %>
+</p>
+
+<p>
+  <strong>Depth:</strong>
+  <%= @product_size.depth %>
+</p>
+
+<%= link_to 'Edit', edit_product_size_path(@product_size) %> |
+<%= link_to 'Back', product_sizes_path %>

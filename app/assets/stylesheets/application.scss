@@ -80,11 +80,16 @@
   margin-top: 20px;
 }
 .about_us-title{
+  color: #f1f1f1;
+  //background-color: rgba(245,237,198,0.7);
 
+  padding: 15px;
+  //border-radius: 10px;
+  font-weight: bold;
 }
 .about_us-text {
-  color: $mel_dark;
-  background-color: rgba(245,237,198,0.5);
+  color: #f1f1f1;
+  //background-color: rgba(245,237,198,0.5);
 
   padding: 15px;
   border-radius: 10px;
@@ -94,20 +99,20 @@
 }
 
 .clients-container {
-  margin: 0;
+  margin: -10px 0 0 0 ;
   min-height: 600px;
-  background: url("clients_background.jpg") center;
+  //background: url("clients_background.jpg") center;
   background-size: cover;
 }
 .about-container{
   margin: 0;
   min-height: 600px;
-  background: url("about_page.png");
+  background: url("about_background.jpg");
   background-size: cover;
   background-position: center;
 }
 #about-bottom-gradient {
-  $brown: #7a5a45;
+  $brown: #9a6f5a;
   min-height: 10px;
   background: $brown; /* For browsers that do not support gradients */
   background: -webkit-linear-gradient($brown, white); /* For Safari 5.1 to 6.0 */
@@ -116,7 +121,7 @@
   background: linear-gradient($brown, white); /* Standard syntax */
 }
 #about-top-gradient {
-  $brown: #b48a71;
+  $brown: #9a6f5a;
   min-height: 6px;
   background: white; /* For browsers that do not support gradients */
   background: -webkit-linear-gradient(white, $brown); /* For Safari 5.1 to 6.0 */
