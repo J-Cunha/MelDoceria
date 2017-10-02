@@ -17,7 +17,10 @@
 
 @import "index";
 @import "products";
+.page-content{
+  padding-top: 180px;
 
+}
 .value-green{
   color: $value_color;
 }

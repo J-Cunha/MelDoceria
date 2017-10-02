@@ -1,4 +1,4 @@
-<div class="container-fluidr" style="margin: 180px 50px 0 50px; ">
+<div class="container-fluidr" style="margin: 0px 50px 0 50px; ">
   <br>
   <p id="notice"><%= notice %></p>
   <div class="row">
@@ -45,7 +45,7 @@
           <% if i == 0 || i%3==0 %>
               <div class="row">
           <% end %>
-          <div class="col-lg-4 col-md-4 col-xs-12 ">
+          <div class="col-lg-4  col-sm-12 col-xs-12 ">
             <div class="thumbnail product-container" style="">
               <div class="product-image-container ">
                 <%= link_to (image_tag product.product_image, class: 'product-image img-responsive'), product %>
@@ -54,7 +54,7 @@
                 </div>
               </div>
               <div class="caption ">
-                <div class="container-fluid">
+                <div class="container-fluid product-header-container">
                   <h3 class="center"><%= link_to "#{product.name}", product, class: 'mel-dark menu-link' %></h3>
                   <h4 class="value-green "><%= "R$#{product.value}" %></h4>
                   <!-- <p><a href="#" class="btn btn-primary" role="button">Button</a>
