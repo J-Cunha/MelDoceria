@@ -5,6 +5,9 @@
 /db/*.sqlite3
 /db/*.sqlite3-journal
 
+# Ignore environment variables
+.env
+
 # Ignore all logfiles and tempfiles.
 /log/*
 /tmp/*
