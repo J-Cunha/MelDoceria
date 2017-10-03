@@ -18,11 +18,13 @@
   </head>
   <body>
   <div class="container-fluid index-container" id="world-background">
-
     <%= render 'layouts/navbar/navbar' %>
-    <%= render 'layouts/shared/flashes' %>
     <div class="page-content">
-    <%= yield %>
+      <div class="container" style="max-width: 1200px;">
+      <%= render 'layouts/shared/flashes' %>
+      </div>
+
+      <%= yield %>
     </div>
   </div>
   <%= render 'layouts/footer' %>

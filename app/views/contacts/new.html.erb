@@ -1,30 +1,27 @@
-
 <% content_for :title do %>
     Mel Doceria | Contato
 <% end %>
-  <div class="container" style="background-color: transparent; border-radius: 50px; min-width: 500px; min-height: 400px; padding: 10px 50px;">
-    <div class="row">
-      <div class="col-sm-7">
-        <h3 class="text-center mel-dark">Envie uma mensagem</h3>
-        <%= simple_form_for @contact, :html => {:class => 'form-horizontal'} do |f| %>
-            <%= f.input :name, label: 'Nome', :required => true, label_html: {class: 'mel-dark'},input_html: {class: 'form-control form-input transparent-background'} %>
-            <br/>
-            <%= f.input :email, label: 'E-mail', :required => true, label_html: {class: 'mel-dark'}, input_html: {class: 'form-control form-input transparent-background'} %>
-            <br/>
-            <%= f.input :message, label: 'Mensagem', :as => :text, label_html: {class: 'mel-dark'}, :required => true, input_html: {rows: 8 ,class: 'form-control form-input  transparent-background'} %>
-            <div class="hidden">
-              <%= f.input :nickname, :hint => 'Leave this field blank!' %>
-            </div>
-              </br>
-              <%= f.button :submit, "Enviar mensagem", :class => "btn btn-default  form-button btn-no-margin" %>
-        <% end %>
-      </div>
-      <div class="col-sm-5 text-center ">
-        <h3 class="text-center mel-dark">Redes Sociais</h3>
-        <br>
-        <iframe src="https://www.facebook.com/plugins/page.php?href=https%3A%2F%2Fwww.facebook.com%2Fmeldoceriarj%2F&tabs&width=340&height=214&small_header=false&adapt_container_width=true&hide_cover=false&show_facepile=true&appId=465876620412327" width="340" height="214" style="border:none;overflow:hidden" scrolling="no" frameborder="0" allowTransparency="true"></iframe>
-      </div>
-
+<div class="container" style="background-color: transparent; border-radius: 50px; min-width: 500px; min-height: 400px; padding: 10px 50px;">
+  <div class="row">
+    <div class="col-sm-7">
+      <h3 class="text-center mel-dark">Envie uma mensagem</h3>
+      <%= simple_form_for @contact, :html => {:class => 'form-horizontal'} do |f| %>
+          <%= f.input :name, label: 'Nome', :required => true, label_html: {class: 'mel-dark'}, input_html: {class: 'form-control form-input transparent-background'} %>
+          <br/>
+          <%= f.input :email, label: 'E-mail', :required => true, label_html: {class: 'mel-dark'}, input_html: {class: 'form-control form-input transparent-background'} %>
+          <br/>
+          <%= f.input :message, label: 'Mensagem', :as => :text, label_html: {class: 'mel-dark'}, :required => true, input_html: {rows: 8, class: 'form-control form-input  transparent-background'} %>
+          <div class="hidden">
+            <%= f.input :nickname, :hint => 'Leave this field blank!' %>
+          </div>
+          </br>
+          <%= f.button :submit, "Enviar mensagem", :class => "btn btn-default  form-button btn-no-margin" %>
+      <% end %>
     </div>
-
+    <div class="col-sm-5 text-center ">
+      <h3 class="text-center mel-dark">Redes Sociais</h3>
+      <br>
+      <iframe src="https://www.facebook.com/plugins/page.php?href=https%3A%2F%2Fwww.facebook.com%2Fmeldoceriarj%2F&tabs&width=340&height=214&small_header=false&adapt_container_width=true&hide_cover=false&show_facepile=true&appId=465876620412327" width="340" height="214" style="border:none;overflow:hidden" scrolling="no" frameborder="0" allowTransparency="true"></iframe>
+    </div>
   </div>
+</div>
