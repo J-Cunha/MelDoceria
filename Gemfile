@@ -34,6 +34,8 @@ gem 'bootstrap3-datetimepicker-rails'
 gem 'simple_form'
 gem 'mail_form'
 
+gem 'cocoon'
+
 gem 'jquery_mask_rails'
 # Use Capistrano for deployment
 # gem 'capistrano-rails', group: :development
@@ -41,7 +43,11 @@ gem 'jquery_mask_rails'
 gem 'devise' #authentication
 gem 'crono' #scheduled jobs
 
+gem 'mini_magick'
+
 gem 'carrierwave'
+gem 'carrierwave-crop'
+
 
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console

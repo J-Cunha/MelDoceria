@@ -1,11 +1,12 @@
 class ProductImageUploader < CarrierWave::Uploader::Base
 
   # Include RMagick or MiniMagick support:
-  # include CarrierWave::RMagick
-  # include CarrierWave::MiniMagick
+  #include CarrierWave::RMagick
+   include CarrierWave::MiniMagick
 
   # Choose what kind of storage to use for this uploader:
   storage :file
+  process crop: :product_image
   # storage :fog
 
   # Override the directory where uploaded files will be stored.

@@ -26,8 +26,9 @@
 }
 .product-image-container img {
 
-  max-height: 360px;
 
+  max-height: 360px;
+  border-radius: 10px;
   //height: 300px;
   -moz-transition: all 0.3s;
   -webkit-transition: all 0.3s;
@@ -41,8 +42,8 @@
 }
 .product-container{
   border-color: $mel_dark;
-  background-color: transparent;
-  border-radius: 10px;
+  background-color: white;
+  border-radius: 6px;
   min-height: 320px;
 
 }

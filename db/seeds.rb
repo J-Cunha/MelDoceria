@@ -38,14 +38,6 @@ casquinha_de_browine = Flavor.create(name:"Casquinha de Brownie")
 
 #ProductSizes
 ################################################################################################
-p = ProductSizeCategory.create(name: 'P')
-m = ProductSizeCategory.create(name: 'M')
-g = ProductSizeCategory.create(name: 'G')
-g = ProductSizeCategory.create(name: 'U')
-
-bolo_peq = ProductSize.create(product_size_category: p, name: 'Bolo Pequeno', weight:'1 Kg', width: '', height: '', depth: '')
-bolo_med =ProductSize.create(product_size_category: m, name: 'Bolo Medio', weight:'2 Kg', width: '', height: '', depth: '')
-bolo_gra =ProductSize.create(product_size_category: g, name: 'Bolo Grande', weight:'3 Kg', width: '', height: '', depth: '')
 ################################################################################################
 #ProductSizes
 
@@ -56,43 +48,33 @@ bolo_gra =ProductSize.create(product_size_category: g, name: 'Bolo Grande', weig
 bolo_brownie = Product.create(name: "Bolo Brownie", category: bolos_cat)
 bolo_brownie.flavors = [brownie_fla]
 bolo_brownie.product_image=File.open('app/assets/images/products/bolo_brownie.jpg')
-ProductProductSize.create(product: bolo_brownie, product_size: bolo_peq, value: 50.0)
-ProductProductSize.create(product: bolo_brownie, product_size: bolo_med, value: 80.0)
-ProductProductSize.create(product: bolo_brownie, product_size: bolo_gra, value: 100.0)
+
 bolo_brownie.save
 #params = {product: bolo_brownie, sizes: [{size: bolo_peq, value: 50.0}, {size: bolo_med, value: 80.0}, {size: bolo_gra, value: 100.0}]}
 
 bolo_kit_kat_morango = Product.create(name: "Bolo de Kitkat com Morango", category: bolos_cat)
 bolo_kit_kat_morango.product_image=File.open('app/assets/images/products/bolo_kitkat_morango.jpg')
 bolo_kit_kat_morango.flavors=morango, kitkat
-ProductProductSize.create(product: bolo_kit_kat_morango, product_size: bolo_peq, value: 50.0)
-ProductProductSize.create(product: bolo_kit_kat_morango, product_size: bolo_med, value: 80.0)
-ProductProductSize.create(product: bolo_kit_kat_morango, product_size: bolo_gra, value: 100.0)
+
 bolo_kit_kat_morango.save
 
 bolo_kit_kat_brigadeiro_leiteninho = Product.create(name: "Bolo de Kitkat com Brigadeiro de Leite Ninho", category: bolos_cat)
 bolo_kit_kat_brigadeiro_leiteninho.product_image=File.open('app/assets/images/products/bolo_kitkat_brigadeiro_leiteninho.jpg')
 bolo_kit_kat_brigadeiro_leiteninho.flavors= kitkat, leite_ninho
-ProductProductSize.create(product: bolo_kit_kat_brigadeiro_leiteninho, product_size: bolo_peq, value: 50.0)
-ProductProductSize.create(product: bolo_kit_kat_brigadeiro_leiteninho, product_size: bolo_med, value: 80.0)
-ProductProductSize.create(product: bolo_kit_kat_brigadeiro_leiteninho, product_size: bolo_gra, value: 100.0)
+
 bolo_kit_kat_brigadeiro_leiteninho.save
 
 bolo_kit_kat_mms = Product.create(name: "Bolo de Kitkat com M&Ms", category: bolos_cat)
 bolo_kit_kat_mms.product_image=File.open('app/assets/images/products/bolo_kitkat_mms.jpg')
 bolo_kit_kat_mms.flavors= kitkat, mms
-ProductProductSize.create(product: bolo_kit_kat_mms, product_size: bolo_peq, value: 50.0)
-ProductProductSize.create(product: bolo_kit_kat_mms, product_size: bolo_med, value: 80.0)
-ProductProductSize.create(product: bolo_kit_kat_mms, product_size: bolo_gra, value: 100.0)
+
 bolo_kit_kat_mms.save
 
 #brownies
 brownies_brownie = Product.create(name: "Brownie", category: brownies_cat)
 brownies_brownie.product_image=File.open('app/assets/images/products/brownie.jpg')
 brownies_brownie.flavors = tradicional, brownie_fla
-ProductProductSize.create(product: brownies_brownie, product_size: bolo_peq, value: 50.0)
-ProductProductSize.create(product: brownies_brownie, product_size: bolo_med, value: 80.0)
-ProductProductSize.create(product: brownies_brownie, product_size: bolo_gra, value: 100.0)
+
 brownies_brownie.save
 
 #browines_pote
@@ -105,5 +87,10 @@ brownies_brownie.save
 
 ################################################################################################
 #Products
+
+
+#Users
+User.create(email: 'mel.sposito@hotmail.com', password: 'Doceria@sucesso93', password_confirmation: 'Doceria@sucesso93')
+User.create(email: 'joao@joao.com', password: 'password', password_confirmation: 'password')
 
 
