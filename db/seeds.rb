@@ -18,7 +18,6 @@ brigadeiros_cat = Category.create(name: "Brigadeiros")
 ################################################################################################
 morango = Flavor.create(name: "Morango")
 kitkat = Flavor.create(name: "Kitkat")
-
 mms  = Flavor.create(name: "M&M's")
 brigadeiro_leite_ninho  = Flavor.create(name: "Brigadeiro de leite ninho")
 leite_ninho  = Flavor.create(name: "Leite Ninho")
@@ -90,7 +89,6 @@ brownies_brownie.save
 
 
 #Users
-User.create(email: 'mel.sposito@hotmail.com', password: 'Doceria@sucesso93', password_confirmation: 'Doceria@sucesso93')
 User.create(email: 'joao@joao.com', password: 'password', password_confirmation: 'password')
 
 
