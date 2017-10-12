@@ -38,7 +38,6 @@ gem 'cocoon'
 
 gem 'jquery_mask_rails'
 # Use Capistrano for deployment
-# gem 'capistrano-rails', group: :development
 
 gem 'devise' #authentication
 gem 'crono' #scheduled jobs
@@ -48,6 +47,9 @@ gem 'mini_magick'
 gem 'carrierwave'
 gem 'carrierwave-crop'
 
+gem 'capistrano-rails'
+gem 'capistrano-bundler'
+gem 'capistrano-rbenv', github: "capistrano/rbenv"
 
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
