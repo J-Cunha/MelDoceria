@@ -5,7 +5,7 @@ class Product < ApplicationRecord
 
   has_many :product_sizes, dependent: :destroy
   accepts_nested_attributes_for :product_sizes, reject_if: :all_blank, allow_destroy: true
-  validates_uniqueness_of :name
+ # validates_uniqueness_of :name
   mount_uploader :product_image, ProductImageUploader
   crop_uploaded :product_image
   validates_presence_of :name, :product_image, :product_sizes, :category, :description
