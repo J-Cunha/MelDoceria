@@ -27,7 +27,7 @@
                 <%= f.input :full_description, label: 'Descrição Completa:', placeholder: 'Descrição completa' %>
                 <%= (image_tag @product.product_image, class: 'img-responsive') unless @product.product_image.nil? || @product.product_image.to_s.empty? %>
                 <label>* Imagem</label>
-                <%= f.file_field :product_image, "Escolher Arquivo", label: 'Imagem:', :id => "upload", :onchange => "readURL(this)" %>
+                <%= f.file_field :product_image, label: 'Imagem:', :id => "upload", :onchange => "readURL(this)" %>
                 <img id="img_prev" src="#" alt=""/>
               </div>
               <div class="col-xs-12 col-lg-5 col-md-6 col-sm-6">
