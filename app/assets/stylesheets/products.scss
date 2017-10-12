@@ -4,10 +4,20 @@
 // Place all the styles related to the dashboard controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
-.product-image-container{
-  padding: 10px;
+.btn-rmv-product_size-container{
+  padding-bottom: 20px;
+}
+.product-show-image-container{
+  //padding: 10px;
+  background-color: transparent;
   position: relative;
-  margin: 2%;
+  //margin: 2%;
+}
+.product-image-container{
+  padding: 2.5% 2.5% 0;
+  background-color: transparent;
+  position: relative;
+  //margin: 2%;
   overflow: hidden;
   -moz-box-sizing: border-box;
   -webkit-box-sizing: border-box;
@@ -18,16 +28,16 @@
   opacity: 1;
   display: block;
   width: 100%;
-  max-height: 360px;
-
   height: auto;
   transition: .5s ease;
   backface-visibility: hidden;
 }
-.product-image-container img {
 
+.product-show-image-container img {
+  border-radius: 10px;
+}
 
-  max-height: 360px;
+  .product-image-container img {
   border-radius: 10px;
   //height: 300px;
   -moz-transition: all 0.3s;
@@ -37,15 +47,38 @@
 .menu-link:hover{
   color: $mel_dark;
 }
-.product-image-container{
-  max-height: 360px;
-}
-.product-container{
+.product-show-container{
+  max-width: 1024px;
+
+}.product-container{
   border-color: $mel_dark;
   background-color: white;
   border-radius: 6px;
   min-height: 320px;
 
+}
+.product-show-sizes-container table{
+  padding: 5px 10px;
+}
+.product-show-sizes-container{
+  background-color: white;
+  padding: 0 2%;
+  border-radius: 6px;
+  min-height: 250px;
+  border: 1px solid $mel_dark;
+}
+.product-show-description-container{
+  background-color: white;
+  padding: 0 2%;
+  border-radius: 6px;
+  min-height: 150px;
+  border: 1px solid $mel_dark;
+  border-bottom: 1px solid $mel_dark;
+}
+.product-show-header-container{
+  border:  1px solid $mel_dark !important;
+  background-color: white;
+  border-radius: 6px;
 }
 .dashboard-container{
   margin-top: 70px ;
@@ -68,7 +101,6 @@
 .dashboard-addresses-tbody td{
   border: none !important;
   //border-color: $water_light_60 !important;
-
 }
 .table-command-button{
   margin: 0 5px 0 5px;
@@ -110,9 +142,8 @@
   text-decoration: none;
 
 }
-
 .product-header-container{
-
-  min-height: 120px;
+  margin-top: -1.5%;
+  margin-left: 0;
 }
 

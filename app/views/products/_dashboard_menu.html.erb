@@ -1,0 +1,29 @@
+<div class="panel-group dashboard-menu" id="accordion">
+  <div class="panel panel-default dashboard-menu-panel ">
+    <div class="panel-heading dashboard-menu-head">
+      <h4 class="panel-title dashboard-menu-title ">
+        <a data-toggle="collapse" data-parent="#accordion" href="#collapseOne">
+          Produtos</a>
+      </h4>
+    </div>
+    <div id="collapseOne" class="panel-collapse collapse  in dashboard-menu-content-container">
+      <div class="panel-body">
+        <table class="table">
+          <% @categories.each do |category| %>
+              <tr>
+                <td>
+                  <%= image_tag 'cakes.png' if category.name == "Bolos" %>
+                  <%= image_tag 'brownies.png' if category.name == "Brownies" %>
+                  <%= image_tag 'brownie_jar.png' if category.name == "Brownies no pote" %>
+                  <%= image_tag 'brigadeiros.png' if category.name == "Brigadeiros" %>
+                  <%= link_to "#{category.name}", products_path, class: 'mel-dark menu-link' %>
+                  <!--<span class="glyphicon glyphicon-pencil text-primary"></span><a href="http://www.jquery2dotnet.com">Articles</a>-->
+                </td>
+              </tr>
+          <% end %>
+        </table>
+      </div>
+    </div>
+  </div>
+
+</div>

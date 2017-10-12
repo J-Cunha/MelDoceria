@@ -1,40 +1,55 @@
 <%= simple_form_for(@product) do |f| %>
     <%= f.error_notification %>
+    <script>
+        function readURL(input) {
+            if (input.files && input.files[0]) {
+                var reader = new FileReader();
+
+                reader.onload = function (e) {
+                    $('#img_prev')
+                        .attr('src', e.target.result)
+                        .width(150)
+                        .height(200);
+                };
+                reader.readAsDataURL(input.files[0]);
+            }
+        }
+    </script>
     <div class="form-inputs">
       <div class="container">
         <div class="row">
           <div class="col-xs-12 col-lg-12">
             <div class="row">
-              <div class="col-xs-12 col-sm-7 ">
-                <%= f.association :category %>
-                <%= f.input :name %>
-              </div>
-              <div class="col-xs-12 col-sm-5">
-                <%= f.association :flavors %>
-              </div>
-            </div>
-            <div class="row">
-              <div class="col-sm-12">
+              <div class="col-xs-12 col-lg-7 col-md-6 col-sm-6 ">
+                <%= f.association :category, label: 'Categoria:' %>
+                <%= f.input :name, label: 'Nome:', placeholder: 'Ex.: Bolo de Chocolate, Bolo Kitkat' %>
+                <%= f.input :description, label: 'Pequena Descrição:', placeholder: 'Ex.: Pequena descrição exibida na pagina principal' %>
+                <%= f.input :full_description, label: 'Descrição Completa:', placeholder: 'Descrição completa' %>
                 <%= (image_tag @product.product_image, class: 'img-responsive') unless @product.product_image.nil? || @product.product_image.to_s.empty? %>
-                <%= f.file_field :product_image %>
+                <%= f.file_field :product_image, label: 'Imagem:', :id => "upload", :onchange => "readURL(this)" %>
+                <img id="img_prev" src="#" alt=""/>
+              </div>
+              <div class="col-xs-12 col-lg-5 col-md-6 col-sm-6">
+                <%= f.association :flavors, label: 'Sabores:' %>
+                <br>
+                <div class="container-fluid">
+                  <%= f.simple_fields_for :product_sizes do |product_size| %>
+                      <%= render 'products/product_size_fields', :f => product_size %>
+                  <% end %>
+                  <div class="btn-add-product_size-container">
+                    <%= link_to_add_association "Adicionar Tamanho", f, :product_sizes, class: 'btn btn-success btn-block  ' %>
+                  </div>
+                </div>
               </div>
             </div>
-            <br>
-            <h3>Tamanhos</h3>
-            <div class="container">
-              <%= f.simple_fields_for :product_sizes do |product_size| %>
-                  <%= render 'products/product_size_fields', :f => product_size %>
-              <% end %>
-              <%= link_to_add_association "Adicionar Tamanho", f, :product_sizes, class: 'btn btn-success  ' %>
-            </div>
+
           </div>
         </div>
-
-
+        <br>
         <div class="row">
           <div class="col-sm-12">
             <div class="form-actions">
-              <%= f.button :submit %>
+              <%= f.button :submit, "Cadastrar Produto" %>
             </div>
           </div>
         </div>

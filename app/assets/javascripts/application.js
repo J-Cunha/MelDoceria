@@ -5,4 +5,5 @@
 //= require bootstrap-datetimepicker
 //= require jquery.mask
 //= require jquery.jcrop
+//= require 'cocoon'
 //= require_tree .

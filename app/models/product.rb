@@ -8,6 +8,10 @@ class Product < ApplicationRecord
   validates_uniqueness_of :name
   mount_uploader :product_image, ProductImageUploader
   crop_uploaded :product_image
-  validates_presence_of :name, :product_image
-
+  validates_presence_of :name, :product_image, :product_sizes, :category, :description
+  def min_value
+    unless self.product_sizes.empty?
+    "R$ #{(('%.2f' %  self.product_sizes.minimum(:value)).sub'.',',')}"
+  end
+  end
 end

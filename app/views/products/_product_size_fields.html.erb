@@ -1,0 +1,27 @@
+<div id="nested-fields" class="row nested-fields product-size-fields">
+  <div class="category_from_list">
+      <div class="col-xs-7">
+        <%= f.input :name, label: 'Tamanho:', placeholder: 'Ex.: Pequeno, 100 Unidades' %>
+      </div>
+      <!--<div class="col-xs-3">
+        <%# f.input :weight, label: 'Peso:', placeholder: 'Ex.: 1kg, 100g, 300ml ' %>
+      </div>-->
+      <div class="col-xs-5">
+        <%= f.input :value, label: 'Valor:', placeholder: 'Ex.: 119.99 ' %>
+      </div>
+      <div class="col-xs-4">
+        <%# f.input :width, label: 'Largura:', placeholder: 'Ex.: 50cm' %>
+      </div>
+      <div class="col-xs-4">
+        <%# f.input :height, label: 'Altura:', placeholder: 'Ex.: 50cm' %>
+      </div>
+      <div class="col-xs-4">
+        <%# f.input :depth, label: 'Profundidade:', placeholder: 'Ex.: 50cm' %>
+      </div>
+    <div class="col-xs-12 center-align btn-rmv-product_size-container">
+      <%= link_to_remove_association "X", f, class: 'btn btn-block btn-danger ' %>
+    </div>
+    <br>
+  </div>
+</div>
+<%# link_to_add_association 'or create a new tag', f, :category %>

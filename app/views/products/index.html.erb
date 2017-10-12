@@ -1,40 +1,12 @@
 <%content_for :title do %>
 Mel Doceria | Produtos
 <% end %>
-<div class="container-fluidr" style="margin: 0px 50px 0 50px; ">
+<div class="container-fluidr" style=" margin: 0px 20px 0 20px; ">
   <br>
   <div class="row">
     <div class="col-lg-2 col-md-3 col-sm-4  ">
 
-      <div class="panel-group dashboard-menu" id="accordion">
-        <div class="panel panel-default dashboard-menu-panel ">
-          <div class="panel-heading dashboard-menu-head">
-            <h4 class="panel-title dashboard-menu-title ">
-              <a data-toggle="collapse" data-parent="#accordion" href="#collapseOne">
-                Produtos</a>
-            </h4>
-          </div>
-          <div id="collapseOne" class="panel-collapse collapse  in dashboard-menu-content-container">
-            <div class="panel-body">
-              <table class="table">
-                <% @categories.each do |category| %>
-                    <tr>
-                      <td>
-                        <%= image_tag 'cakes.png' if category.name == "Bolos" %>
-                        <%= image_tag 'brownies.png' if category.name == "Brownies" %>
-                        <%= image_tag 'brownie_jar.png' if category.name == "Brownies no pote" %>
-                        <%= image_tag 'brigadeiros.png' if category.name == "Brigadeiros" %>
-                        <%= link_to "#{category.name}", products_path, class: 'mel-dark menu-link' %>
-                        <!--<span class="glyphicon glyphicon-pencil text-primary"></span><a href="http://www.jquery2dotnet.com">Articles</a>-->
-                      </td>
-                    </tr>
-                <% end %>
-              </table>
-            </div>
-          </div>
-        </div>
-
-      </div>
+     <%= render ('dashboard_menu') %>
     </div>
 
     <div class="col-lg-10 col-md-9 col-sm-8 ">
@@ -47,18 +19,18 @@ Mel Doceria | Produtos
           <% if i == 0 || i%3==0 %>
               <div class="row">
           <% end %>
-          <div class="col-lg-4  col-sm-12 col-xs-12 ">
+          <div class="col-lg-4   col-sm-12 col-xs-12 ">
             <div class="thumbnail product-container" style="">
               <div class="product-image-container ">
-                <%= link_to (image_tag product.product_image, class: 'product-image img-responsive'), product %>
+                <%= link_to (image_tag product.product_image,  class: 'product-image img-responsive'), product %>
                 <div class="middle">
-                  <div class="product-description"><%= link_to "Deleicioso gostoso maravilhoso bolo divino das alturas onde o grande bahomet reside product.description", product, class: 'product-description-link' %></div>
+                  <div class="product-description"><%= link_to product.description, product, class: 'product-description-link' %></div>
                 </div>
               </div>
               <div class="caption ">
                 <div class="container-fluid product-header-container">
                   <h3 class="center"><%= link_to "#{product.name}", product, class: 'mel-dark menu-link' %></h3>
-                  <h4 class="value-green "><%= "R$#{product.value}" %></h4>
+                  <h4 class="value-green "><%= "A partir de #{product.min_value}" %></h4>
                   <!-- <p><a href="#" class="btn btn-primary" role="button">Button</a>
                     <a href="#" class="btn btn-default" role="button">Button</a></p>-->
                 </div>

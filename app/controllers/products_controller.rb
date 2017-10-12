@@ -24,6 +24,9 @@ class ProductsController < ApplicationController
 
   # GET /products/1/edit
   def edit
+    @product.product_sizes.build()  if (@product.product_sizes.empty? || @product.product_sizes.nil?)
+
+
   end
 
   # POST /products
@@ -55,9 +58,16 @@ class ProductsController < ApplicationController
   # PATCH/PUT /products/1
   # PATCH/PUT /products/1.json
   def update
+
     respond_to do |format|
       if @product.update(product_params)
-        format.html {redirect_to @product, notice: 'Product was successfully updated.'}
+        format.html {
+          if product_params[:product_image].present?
+            render :crop ## Render the view for cropping
+            else
+              redirect_to @product, notice: 'Product was successfully updated.'
+          end
+        }
         format.json {render :show, status: :ok, location: @product}
       else
         format.html {render :edit}
@@ -84,6 +94,13 @@ class ProductsController < ApplicationController
 
   # Never trust parameters from the scary internet, only allow the white list through.
   def product_params
-    params.require(:product).permit(:product_image, :product_image_crop_x, :product_image_crop_y, :product_image_crop_w, :product_image_crop_h, :category_id, :description, :name, product_sizes_attributes: [:id, :name, :weight, :height, :width, :depth, :value, :_destroy])
+    params.require(:product).permit(:product_image,
+                                    :product_image_crop_x,
+                                    :product_image_crop_y,
+                                    :product_image_crop_w,
+                                    :product_image_crop_h,
+                                    :category_id,
+                                    :description, :full_description,
+                                    :name, product_sizes_attributes: [:id, :name, :weight, :height, :width, :depth, :value, :_destroy])
   end
 end
