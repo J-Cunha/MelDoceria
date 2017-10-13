@@ -30,7 +30,6 @@
 </div>
 
 </body>
-<%= render 'layouts/footer' %>
 <script type="application/javascript">
     setWorldBackgroundHeight();
     window.addEventListener('resize', setWorldBackgroundHeight);
@@ -39,5 +38,7 @@
         document.getElementById("world-background").style.minHeight = "" + ($(window).height()) + "px";
     }
 </script>
+<%= render 'layouts/footer' %>
+
 
 </html>
