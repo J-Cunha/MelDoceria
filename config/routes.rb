@@ -1,10 +1,11 @@
 Rails.application.routes.draw do
+  resources :site_contatcts, as: :contacts
+  resources :site_contatcts
   resources :product_sizes
-  resources :product_size_categories
   resources :flavors
   resources :categories
   resources :products
-  resources 'contacts', only: [:new, :create]
+  #resources 'contacts', only: [:new, :create]
 
   devise_for :users
   root to: 'products#index'

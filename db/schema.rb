@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20171012014754) do
+ActiveRecord::Schema.define(version: 20171013032243) do
 
   create_table "categories", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8" do |t|
     t.string "name"
@@ -33,34 +33,17 @@ ActiveRecord::Schema.define(version: 20171012014754) do
     t.index ["product_id"], name: "index_product_flavors_on_product_id"
   end
 
-  create_table "product_product_sizes", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8" do |t|
-    t.bigint "product_size_id"
-    t.bigint "product_id"
-    t.float "value", limit: 24
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
-    t.index ["product_id"], name: "index_product_product_sizes_on_product_id"
-    t.index ["product_size_id"], name: "index_product_product_sizes_on_product_size_id"
-  end
-
-  create_table "product_size_categories", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8" do |t|
-    t.string "name"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
-  end
-
   create_table "product_sizes", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8" do |t|
     t.bigint "product_id"
-    t.bigint "product_size_category_id"
     t.string "name"
     t.string "weight"
     t.string "width"
     t.string "height"
     t.string "depth"
+    t.float "value", limit: 24
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.index ["product_id"], name: "index_product_sizes_on_product_id"
-    t.index ["product_size_category_id"], name: "index_product_sizes_on_product_size_category_id"
   end
 
   create_table "products", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8" do |t|
@@ -73,6 +56,15 @@ ActiveRecord::Schema.define(version: 20171012014754) do
     t.string "product_image"
     t.text "full_description"
     t.index ["category_id"], name: "index_products_on_category_id"
+  end
+
+  create_table "site_contatcts", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8" do |t|
+    t.string "name"
+    t.string "email"
+    t.text "message"
+    t.boolean "answered"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
   end
 
   create_table "users", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8" do |t|
@@ -94,9 +86,6 @@ ActiveRecord::Schema.define(version: 20171012014754) do
 
   add_foreign_key "product_flavors", "flavors"
   add_foreign_key "product_flavors", "products"
-  add_foreign_key "product_product_sizes", "product_sizes"
-  add_foreign_key "product_product_sizes", "products"
-  add_foreign_key "product_sizes", "product_size_categories"
   add_foreign_key "product_sizes", "products"
   add_foreign_key "products", "categories"
 end

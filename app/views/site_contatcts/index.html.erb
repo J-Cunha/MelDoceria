@@ -1,0 +1,32 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Site Contatcts</h1>
+
+<table class="table">
+  <thead>
+    <tr>
+      <th>Name</th>
+      <th>Email</th>
+      <th>Message</th>
+      <th>Answered</th>
+      <th colspan="2"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @site_contatcts.each do |site_contatct| %>
+      <tr>
+        <td><%= site_contatct.name %></td>
+        <td><%= site_contatct.email %></td>
+        <td><%= site_contatct.message %></td>
+        <td><%= site_contatct.answered %></td>
+        <td><%= link_to 'Show', site_contatct %></td>
+        <td><%= link_to 'Destroy', site_contatct, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Site Contatct', new_site_contatct_path %>

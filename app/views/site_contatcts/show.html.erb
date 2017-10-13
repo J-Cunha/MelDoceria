@@ -1,0 +1,24 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Name:</strong>
+  <%= @site_contatct.name %>
+</p>
+
+<p>
+  <strong>Email:</strong>
+  <%= @site_contatct.email %>
+</p>
+
+<p>
+  <strong>Message:</strong>
+  <%= @site_contatct.message %>
+</p>
+
+<p>
+  <strong>Answered:</strong>
+  <%= @site_contatct.answered %>
+</p>
+
+<%= link_to 'Edit', edit_site_contatct_path(@site_contatct) %> |
+<%= link_to 'Back', site_contatcts_path %>
