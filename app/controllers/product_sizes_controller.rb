@@ -1,5 +1,6 @@
 class ProductSizesController < ApplicationController
   before_action :set_product_size, only: [:show, :edit, :update, :destroy]
+  before_action :authenticate_user!
 
   # GET /product_sizes
   # GET /product_sizes.json
