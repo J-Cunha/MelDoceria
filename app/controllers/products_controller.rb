@@ -49,7 +49,7 @@ class ProductsController < ApplicationController
         format.json {render :show, status: :created, location: @product}
 
       else
-        puts @product.errors.full_messages
+        puts @product.errors.messages.inspect
         format.html {render :new}
         format.json {render json: @product.errors, status: :unprocessable_entity}
       end
