@@ -113,9 +113,8 @@
 .about-container{
   margin: 0;
   min-height: 600px;
-  background: asset_url("about_background.jpg");
+  background: asset_url("about_background.jpg") center;
   background-size: cover;
-  background: center;
 }
 #about-bottom-gradient {
   $brown: #9a6f5a;
