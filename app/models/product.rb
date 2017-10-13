@@ -1,5 +1,5 @@
 class Product < ApplicationRecord
-  belongs_to :category
+  belongs_to :category, required: false
   has_many :product_flavors, dependent: :destroy
   has_many :flavors, dependent: :destroy, through: :product_flavors
 
@@ -8,7 +8,7 @@ class Product < ApplicationRecord
  # validates_uniqueness_of :name
   mount_uploader :product_image, ProductImageUploader
   crop_uploaded :product_image
-  validates_presence_of :name, :product_image, :product_sizes, :category, :description
+  validates_presence_of :name, :category, :description
   def min_value
     unless self.product_sizes.empty?
     "R$ #{(('%.2f' %  self.product_sizes.minimum(:value)).sub'.',',')}"
