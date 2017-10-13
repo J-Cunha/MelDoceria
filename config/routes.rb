@@ -1,6 +1,7 @@
 Rails.application.routes.draw do
   resources :site_contatcts, as: :contacts
   resources :site_contatcts
+  get '/contacts', to: 'site_contatcts#index'
   resources :product_sizes
   resources :flavors
   resources :categories
